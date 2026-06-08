@@ -24,14 +24,14 @@
   <title>Fluispotter - Wearable Automated PK/PD Profiles in Large Animals</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: { 600: '#0d9488', 700: '#0f766e', 800: '#115e59' },
+            brand: { 50: '#f0fdfa', 100: '#ccfbf1', 600: '#0d9488', 700: '#0f766e', 800: '#115e59' },
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -46,6 +46,7 @@
     body { font-family: 'Inter', system-ui, sans-serif; }
     h1, h2, h3 { font-family: 'Montserrat', system-ui, sans-serif; }
     section[id] { scroll-margin-top: 5rem; }
+    .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #0f766e; }
   </style>
   <script type="application/ld+json">
     {
@@ -82,309 +83,360 @@
 <body class="bg-white text-slate-700 antialiased">
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-    <div class="max-w-3xl mx-auto px-5 h-14 flex items-center justify-between">
-      <a href="#home" class="font-display font-bold text-slate-900 tracking-tight">Fluispotter</a>
-      <nav class="flex items-center gap-5 text-sm text-slate-500">
-        <a href="#features" class="hover:text-slate-900 transition-colors">Features</a>
-        <a href="#publications" class="hover:text-slate-900 transition-colors">Publications</a>
-        <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
-        <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#home" class="font-display font-extrabold text-lg tracking-tight text-slate-900">Fluispotter</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#features" class="hover:text-brand-700 transition-colors">Features</a>
+        <a href="#applications" class="hover:text-brand-700 transition-colors">Applications</a>
+        <a href="#publications" class="hover:text-brand-700 transition-colors">Publications</a>
+        <a href="#about" class="hover:text-brand-700 transition-colors">About</a>
       </nav>
+      <a href="#contact" class="inline-flex items-center rounded-md bg-brand-600 hover:bg-brand-700 transition-colors text-white text-sm font-semibold px-4 py-2">Get in touch</a>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-5">
-
+  <main>
     <!-- Hero -->
-    <section id="home" class="pt-16 sm:pt-24 pb-10">
-      <p class="text-sm font-medium text-brand-700">Preclinical PK/PD · Large animals</p>
-      <h1 class="mt-3 font-display font-bold tracking-tight text-slate-900 text-3xl sm:text-4xl leading-tight">
-        Wearable, automated PK/PD profiles in large animals
-      </h1>
-      <p class="mt-5 text-lg text-slate-600 leading-relaxed">
-        The Fluispotter wearable blood sampling system enables precise, high-frequency blood sampling for pharmacokinetic (PK) and pharmacodynamic (PD) preclinical studies — delivering stress-free collection and enhanced animal welfare.
-      </p>
-      <div class="mt-7">
-        <a href="#contact" class="inline-flex items-center gap-2 text-brand-700 font-medium hover:text-brand-800">
-          Get in touch <span aria-hidden="true">&rarr;</span>
-        </a>
+    <section id="home" class="max-w-5xl mx-auto px-5 pt-16 sm:pt-20 pb-12">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Preclinical PK/PD · Large animals</p>
+        <h1 class="mt-4 font-display font-extrabold tracking-tight text-slate-900 text-4xl sm:text-5xl leading-[1.08]">
+          Wearable, automated PK/PD profiles in large animals
+        </h1>
+        <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+          The Fluispotter wearable blood sampling system enables precise, high-frequency blood sampling for pharmacokinetic (PK) and pharmacodynamic (PD) preclinical studies — delivering stress-free collection and enhanced animal welfare.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-md bg-brand-600 hover:bg-brand-700 transition-colors text-white font-semibold px-5 py-3">
+            Get in touch <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="#publications" class="inline-flex items-center font-medium text-brand-700 hover:text-brand-800">View publications</a>
+        </div>
       </div>
+
+      <figure class="mt-12">
+        <img src="hero.jpg" alt="The Fluispotter device held in a hand, worn by a dog, and worn by a pig"
+             class="w-full rounded-xl ring-1 ring-slate-900/5 shadow-sm cursor-pointer" id="clickable-image">
+        <figcaption class="mt-3 text-sm text-slate-400">
+          Lightweight and body-worn — validated in minipigs, dogs and other large animal models.
+        </figcaption>
+      </figure>
     </section>
 
-    <!-- Hero image -->
-    <figure class="pb-14">
-      <img src="hero.jpg" alt="The Fluispotter device held in a hand, worn by a dog, and worn by a pig"
-           class="w-full rounded-lg ring-1 ring-slate-900/5 cursor-pointer" id="clickable-image">
-      <figcaption class="mt-3 text-sm text-slate-400">
-        Lightweight and body-worn — validated in minipigs, dogs and other large animal models.
-      </figcaption>
-    </figure>
-
-    <!-- Specs row -->
-    <section class="py-10 border-t border-slate-100 flex flex-wrap gap-x-12 gap-y-5">
-      <div>
-        <div class="font-display text-2xl font-semibold text-slate-900">48 h</div>
-        <div class="text-sm text-slate-500">Continuous runtime</div>
-      </div>
-      <div>
-        <div class="font-display text-2xl font-semibold text-slate-900">50</div>
-        <div class="text-sm text-slate-500">Samples per study</div>
-      </div>
-      <div>
-        <div class="font-display text-2xl font-semibold text-slate-900">10 µL</div>
-        <div class="text-sm text-slate-500">Per dried blood spot</div>
-      </div>
-      <div>
-        <div class="font-display text-2xl font-semibold text-slate-900">Zero</div>
-        <div class="text-sm text-slate-500">Carry-over between samples</div>
+    <!-- Stat band -->
+    <section class="bg-slate-50 border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-5 py-10 grid grid-cols-2 lg:grid-cols-4 divide-x divide-slate-200">
+        <div class="px-5 first:pl-0">
+          <div class="font-display text-3xl font-extrabold text-slate-900">48 h</div>
+          <div class="mt-1 text-sm text-slate-500">Continuous runtime</div>
+        </div>
+        <div class="px-5">
+          <div class="font-display text-3xl font-extrabold text-slate-900">50</div>
+          <div class="mt-1 text-sm text-slate-500">Samples per study</div>
+        </div>
+        <div class="px-5">
+          <div class="font-display text-3xl font-extrabold text-slate-900">10 µL</div>
+          <div class="mt-1 text-sm text-slate-500">Per dried blood spot</div>
+        </div>
+        <div class="px-5">
+          <div class="font-display text-3xl font-extrabold text-slate-900">Zero</div>
+          <div class="mt-1 text-sm text-slate-500">Carry-over between samples</div>
+        </div>
       </div>
     </section>
 
     <!-- Overview -->
-    <section class="py-12 border-t border-slate-100">
-      <p class="text-slate-600 leading-relaxed">
-        Designed to streamline sampling, our wearable automated blood sampling system ensures precise, high-quality data collection. By combining advanced automation, remote capabilities and animal-centric design, Fluispotter supports the well-being of research subjects while delivering reliable data for drug development and research.
-      </p>
+    <section class="max-w-5xl mx-auto px-5 py-16">
+      <div class="max-w-3xl">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Better data, with less intervention</h2>
+        <p class="mt-5 text-slate-600 leading-relaxed">
+          Designed to streamline sampling, our wearable automated blood sampling system ensures precise, high-quality data collection. By combining advanced automation, remote capabilities and animal-centric design, Fluispotter supports the well-being of research subjects while delivering reliable data for drug development and research.
+        </p>
+      </div>
     </section>
 
     <!-- Features -->
-    <section id="features" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Key features</h2>
-      <div class="mt-8 grid sm:grid-cols-2 gap-x-10 gap-y-7">
-        <div>
-          <h3 class="font-semibold text-slate-900">Automated catheter maintenance</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Built-in catheter flushing keeps performance consistent and prevents blockages throughout the study.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">Flexible study execution</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Load predefined protocols for automated execution, or trigger on-demand sampling through the remote interface.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">Versatile access options</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Supports catheter-in-catheter, subcutaneous ports, transcutaneous ports or direct vein access — tailored to your study.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">High sample capacity</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Collects up to 50 samples per study at 10&nbsp;µL each, enabling detailed time-course analysis.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">Extended runtime</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Operates continuously for up to 48 hours, supporting long-duration PK/PD studies without interrupting the animal.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">Remote monitoring &amp; control</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Real-time feedback and full remote control let researchers monitor progress and adjust protocols on the fly.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">No fluid handling</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">An integrated anticoagulant system eliminates manual fluid handling, simplifying workflows and reducing contamination risk.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">No-carry-over design</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Uni-directional blood flow ensures clean sampling with zero carry-over between samples, protecting data integrity.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">Wearable design</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Lightweight and optimized for large animals — pigs, dogs, rabbits, non-human primates — allowing natural movement and minimizing stress.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-slate-900">Simple user interface</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">A streamlined "unpack, connect, activate, sample" workflow minimizes training and setup time.</p>
+    <section id="features" class="bg-slate-50 border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-5 py-16">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Key features</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl">Everything you need for unattended, high-resolution serial sampling in conscious, freely-moving animals.</p>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Automated catheter maintenance</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Built-in catheter flushing keeps performance consistent and prevents blockages throughout the study.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Flexible study execution</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Load predefined protocols for automated execution, or trigger on-demand sampling through the remote interface.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Versatile access options</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Supports catheter-in-catheter, subcutaneous ports, transcutaneous ports or direct vein access — tailored to your study.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">High sample capacity</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Collects up to 50 samples per study at 10&nbsp;µL each, enabling detailed time-course analysis.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Extended runtime</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Operates continuously for up to 48 hours, supporting long-duration PK/PD studies without interrupting the animal.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Remote monitoring &amp; control</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Real-time feedback and full remote control let researchers monitor progress and adjust protocols on the fly.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">No fluid handling</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">An integrated anticoagulant system eliminates manual fluid handling, simplifying workflows and reducing contamination risk.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">No-carry-over design</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Uni-directional blood flow ensures clean sampling with zero carry-over between samples, protecting data integrity.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Wearable design</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Lightweight and optimized for large animals — pigs, dogs, rabbits, non-human primates — allowing natural movement and minimizing stress.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Dried blood spot sampling</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Collects up to 50 dried blood spots over 48 hours, ideal for downstream bioanalysis and storage.</p>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Simple user interface</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">A streamlined "unpack, connect, activate, sample" workflow minimizes training and setup time.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Applications -->
-    <section id="applications" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Applications</h2>
-      <ul class="mt-6 space-y-2.5 text-slate-600">
-        <li class="flex gap-3"><span class="text-brand-600">&bull;</span> Cardiovascular telemetry studies for drug safety.</li>
-        <li class="flex gap-3"><span class="text-brand-600">&bull;</span> Drug absorption, distribution, metabolism and excretion (ADME) studies.</li>
-        <li class="flex gap-3"><span class="text-brand-600">&bull;</span> Dose-response and efficacy assessments in PD models.</li>
-        <li class="flex gap-3"><span class="text-brand-600">&bull;</span> Biomarker analysis and therapeutic monitoring in large animal models.</li>
-      </ul>
+    <section id="applications" class="max-w-5xl mx-auto px-5 py-16">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Applications</h2>
+      <div class="mt-8 grid sm:grid-cols-2 gap-4">
+        <div class="flex gap-3 rounded-xl border border-slate-200 p-5">
+          <span class="text-brand-600 font-bold">&#10003;</span>
+          <p class="text-slate-700">Cardiovascular telemetry studies for drug safety.</p>
+        </div>
+        <div class="flex gap-3 rounded-xl border border-slate-200 p-5">
+          <span class="text-brand-600 font-bold">&#10003;</span>
+          <p class="text-slate-700">Drug absorption, distribution, metabolism and excretion (ADME) studies.</p>
+        </div>
+        <div class="flex gap-3 rounded-xl border border-slate-200 p-5">
+          <span class="text-brand-600 font-bold">&#10003;</span>
+          <p class="text-slate-700">Dose-response and efficacy assessments in PD models.</p>
+        </div>
+        <div class="flex gap-3 rounded-xl border border-slate-200 p-5">
+          <span class="text-brand-600 font-bold">&#10003;</span>
+          <p class="text-slate-700">Biomarker analysis and therapeutic monitoring in large animal models.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Dried blood spots -->
-    <section id="dried-blood-spots" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Dried blood spot sampling</h2>
-      <div class="mt-6 grid sm:grid-cols-3 gap-8 items-start">
-        <div class="sm:col-span-2 space-y-4 text-slate-600 leading-relaxed">
-          <p>
+    <section id="dried-blood-spots" class="bg-slate-50 border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-5 py-16 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Dried blood spot sampling</h2>
+          <p class="mt-5 text-slate-600 leading-relaxed">
             The device spots 10&nbsp;µL blood samples onto a filter-paper strip, collecting up to 50 dried blood spots (DBS) per study for easy processing with standard punchers and analysis via HPLC, LC-MS/MS or ELISA. The non-heparin anticoagulant ensures consistent dilution without matrix effects — ideal for small molecules, peptides and biomarkers. Studies confirm DBS equivalence to whole blood, with high accuracy across hematocrit levels:
             <a href="https://doi.org/10.4155/bio-2020-0048" class="text-brand-700 hover:text-brand-800 underline underline-offset-2" target="_blank" rel="noopener">Adhikari et&nbsp;al. (2020)</a>;
             <a href="https://doi.org/10.1530/EC-23-0087" class="text-brand-700 hover:text-brand-800 underline underline-offset-2" target="_blank" rel="noopener">Krogh et&nbsp;al. (2023)</a>.
           </p>
-          <p>
+          <p class="mt-4 text-slate-600 leading-relaxed">
             The heparin-free system enhances assay compatibility and animal welfare, as demonstrated in minipig and canine models
             (<a href="https://doi.org/10.1016/j.vascn.2022.107155" class="text-brand-700 hover:text-brand-800 underline underline-offset-2" target="_blank" rel="noopener">Ollerenshaw et&nbsp;al. (2022)</a>;
             <a href="https://ojs.utlib.ee/index.php/SJLAS/article/view/21375/16071" class="text-brand-700 hover:text-brand-800 underline underline-offset-2" target="_blank" rel="noopener">Velschow et&nbsp;al. (2016)</a>).
+            With a no-carry-over design and streamlined workflow, DBS sampling supports a wide range of compounds.
           </p>
-          <p class="text-slate-700">
+          <p class="mt-4 text-slate-700 font-medium">
             Want to validate your molecules for DBS?
             <a href="#contact" class="text-brand-700 hover:text-brand-800 underline underline-offset-2">Contact us</a>
             for expert guidance.
           </p>
         </div>
-        <img src="device.png" alt="The Fluispotter device with its dried blood spot collection strip, held in a hand" class="w-full max-w-[220px] sm:max-w-none object-contain">
+        <div class="rounded-xl bg-white border border-slate-200 p-8 flex items-center justify-center">
+          <img src="device.png" alt="The Fluispotter device with its dried blood spot collection strip, held in a hand" class="max-h-64 w-auto object-contain">
+        </div>
       </div>
     </section>
 
     <!-- Benefits -->
-    <section id="benefits" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Why researchers choose Fluispotter</h2>
-      <p class="mt-4 text-slate-600 leading-relaxed">A stress-free, efficient and ethical solution for PK/PD studies in preclinical large animal models — high-quality data while supporting animal welfare and accelerating drug-development timelines.</p>
-      <div class="mt-8 grid sm:grid-cols-2 gap-x-10 gap-y-7">
+    <section id="benefits" class="max-w-5xl mx-auto px-5 py-16">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Why researchers choose Fluispotter</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed max-w-3xl">A stress-free, efficient and ethical solution for PK/PD studies in preclinical large animal models — high-quality data while supporting animal welfare and accelerating drug-development timelines.</p>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
         <div>
-          <h3 class="font-semibold text-slate-900">Better science</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Sampling from undisturbed animals removes the stress of handling from the sampling procedure.</p>
+          <h3 class="font-semibold text-slate-900 border-l-2 border-brand-600 pl-3">Better science</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed pl-3">Sampling from undisturbed animals removes the stress of handling from the sampling procedure.</p>
         </div>
         <div>
-          <h3 class="font-semibold text-slate-900">More data, less intervention</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Automated sampling enables far more frequent sampling than conventional methods, producing high temporal-resolution data without extra resources or added stress.</p>
+          <h3 class="font-semibold text-slate-900 border-l-2 border-brand-600 pl-3">More data, less intervention</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed pl-3">Automated sampling enables far more frequent sampling than conventional methods, producing high temporal-resolution data without extra resources or added stress.</p>
         </div>
         <div>
-          <h3 class="font-semibold text-slate-900">Efficiency</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Automating repetitive sampling frees up researcher time for data analysis and study design.</p>
+          <h3 class="font-semibold text-slate-900 border-l-2 border-brand-600 pl-3">Efficiency</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed pl-3">Automating repetitive sampling frees up researcher time for data analysis and study design.</p>
         </div>
         <div>
-          <h3 class="font-semibold text-slate-900">Scalability</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Suitable for large animal models, supporting diverse preclinical programs.</p>
+          <h3 class="font-semibold text-slate-900 border-l-2 border-brand-600 pl-3">Scalability</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed pl-3">Suitable for large animal models, supporting diverse preclinical programs.</p>
         </div>
         <div>
-          <h3 class="font-semibold text-slate-900">Regulatory alignment</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Supports the 3Rs principles (Replacement, Reduction, Refinement) by minimizing animal stress and optimizing outcomes.</p>
+          <h3 class="font-semibold text-slate-900 border-l-2 border-brand-600 pl-3">Regulatory alignment</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed pl-3">Supports the 3Rs principles (Replacement, Reduction, Refinement) by minimizing animal stress and optimizing outcomes.</p>
         </div>
         <div>
-          <h3 class="font-semibold text-slate-900">Versatility &amp; traceability</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Adaptable to single-dose, multi-dose and extended-release designs, with precise tracking of collection times and storage conditions.</p>
+          <h3 class="font-semibold text-slate-900 border-l-2 border-brand-600 pl-3">Versatility &amp; traceability</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed pl-3">Adaptable to single-dose, multi-dose and extended-release designs, with precise tracking of collection times and storage conditions.</p>
         </div>
       </div>
     </section>
 
     <!-- Technical specifications -->
-    <section id="technical-specifications" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Technical specifications</h2>
-      <dl class="mt-6 divide-y divide-slate-100 border-y border-slate-100">
-        <div class="py-3 sm:flex sm:gap-6">
-          <dt class="sm:w-56 shrink-0 font-medium text-slate-900">Runtime</dt>
-          <dd class="text-slate-600">Up to 48 hours of continuous operation.</dd>
-        </div>
-        <div class="py-3 sm:flex sm:gap-6">
-          <dt class="sm:w-56 shrink-0 font-medium text-slate-900">Sample volume &amp; capacity</dt>
-          <dd class="text-slate-600">10&nbsp;µL per sample, up to 50 dried blood spot samples.</dd>
-        </div>
-        <div class="py-3 sm:flex sm:gap-6">
-          <dt class="sm:w-56 shrink-0 font-medium text-slate-900">Remote capabilities</dt>
-          <dd class="text-slate-600">Fully remote-controlled and monitored, with real-time data feedback.</dd>
-        </div>
-        <div class="py-3 sm:flex sm:gap-6">
-          <dt class="sm:w-56 shrink-0 font-medium text-slate-900">Catheter maintenance</dt>
-          <dd class="text-slate-600">Automated flushing and upkeep for reliable performance.</dd>
-        </div>
-        <div class="py-3 sm:flex sm:gap-6">
-          <dt class="sm:w-56 shrink-0 font-medium text-slate-900">Sample integrity</dt>
-          <dd class="text-slate-600">No-carry-over design with built-in anticoagulant for clean samples.</dd>
-        </div>
-      </dl>
+    <section id="technical-specifications" class="bg-slate-50 border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-5 py-16">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Technical specifications</h2>
+        <dl class="mt-8 grid sm:grid-cols-2 gap-px bg-slate-200 rounded-xl overflow-hidden border border-slate-200">
+          <div class="bg-white p-6">
+            <dt class="text-sm font-semibold text-brand-700">Runtime</dt>
+            <dd class="mt-1 text-slate-700">Up to 48 hours of continuous operation.</dd>
+          </div>
+          <div class="bg-white p-6">
+            <dt class="text-sm font-semibold text-brand-700">Sample volume &amp; capacity</dt>
+            <dd class="mt-1 text-slate-700">10&nbsp;µL per sample, up to 50 dried blood spot samples.</dd>
+          </div>
+          <div class="bg-white p-6">
+            <dt class="text-sm font-semibold text-brand-700">Remote capabilities</dt>
+            <dd class="mt-1 text-slate-700">Fully remote-controlled and monitored, with real-time data feedback.</dd>
+          </div>
+          <div class="bg-white p-6">
+            <dt class="text-sm font-semibold text-brand-700">Catheter maintenance</dt>
+            <dd class="mt-1 text-slate-700">Automated flushing and upkeep for reliable performance.</dd>
+          </div>
+          <div class="bg-white p-6 sm:col-span-2">
+            <dt class="text-sm font-semibold text-brand-700">Sample integrity</dt>
+            <dd class="mt-1 text-slate-700">No-carry-over design with built-in anticoagulant for clean, uncontaminated samples.</dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
     <!-- Partnerships -->
-    <section id="partnerships" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Partnerships</h2>
-      <p class="mt-4 text-slate-600 leading-relaxed">We collaborate with leading organizations to advance preclinical research and extend the capabilities of the Fluispotter system.</p>
-      <div class="mt-6 grid sm:grid-cols-2 gap-x-10 gap-y-6">
-        <div>
+    <section id="partnerships" class="max-w-5xl mx-auto px-5 py-16">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Partnerships</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed max-w-3xl">We collaborate with leading organizations to advance preclinical research and extend the capabilities of the Fluispotter system.</p>
+      <div class="mt-8 grid sm:grid-cols-2 gap-5">
+        <div class="rounded-xl border border-slate-200 p-6">
           <h3 class="font-semibold text-slate-900">Boehringer Ingelheim</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Working with us to optimize automated sampling for drug development.</p>
+          <p class="mt-1 text-sm text-slate-600 leading-relaxed">Working with us to optimize automated sampling for drug development.</p>
         </div>
-        <div>
+        <div class="rounded-xl border border-slate-200 p-6">
           <h3 class="font-semibold text-slate-900">Merck</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Collaborating to support innovative PK/PD study solutions.</p>
+          <p class="mt-1 text-sm text-slate-600 leading-relaxed">Collaborating to support innovative PK/PD study solutions.</p>
         </div>
-        <div>
+        <div class="rounded-xl border border-slate-200 p-6">
           <h3 class="font-semibold text-slate-900">Medical University of South Carolina</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Testing the Fluispotter in pigs for PK/PD studies.</p>
+          <p class="mt-1 text-sm text-slate-600 leading-relaxed">Testing the Fluispotter in pigs for PK/PD studies.</p>
         </div>
-        <div>
+        <div class="rounded-xl border border-slate-200 p-6">
           <h3 class="font-semibold text-slate-900">BASi (Bioanalytical Systems, Inc.)</h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">Partnering to distribute the Fluispotter to the research community.</p>
+          <p class="mt-1 text-sm text-slate-600 leading-relaxed">Partnering to distribute the Fluispotter to the research community.</p>
         </div>
       </div>
       <p class="mt-6 text-slate-600 leading-relaxed">We are always open to academic and industry collaborations. For details, please <a href="#contact" class="text-brand-700 hover:text-brand-800 underline underline-offset-2">contact us</a>.</p>
     </section>
 
     <!-- Publications -->
-    <section id="publications" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Publications</h2>
-      <p class="mt-4 text-slate-600 leading-relaxed">Peer-reviewed publications and abstracts on the performance, safety and applications of the Fluispotter device.</p>
-      <ol class="mt-7 space-y-6">
-        <li>
-          <a href="https://doi.org/10.4155/bio-2020-0048" class="font-medium text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
-            Adhikari, K. B., et al. "Fluispotter, a novel automated and wearable device for accurate volume serial dried blood spot sampling." <em>Bioanalysis</em>, vol. 12, no. 10, 2020, pp. 665–681.
-          </a>
-          <p class="mt-1.5 text-sm text-slate-500 leading-relaxed">Demonstrates high accuracy and precision in serial dried blood spot sampling for cortisol analysis across a range of hematocrit values.</p>
-        </li>
-        <li>
-          <a href="https://doi.org/10.1530/EC-23-0087" class="font-medium text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
-            Krogh, J., et al. "Validation of a novel automated system, Fluispotter®, for serial sampling of dried blood spots." <em>Endocrine Connections</em>, vol. 12, no. 7, 2023, e230087.
-          </a>
-          <p class="mt-1.5 text-sm text-slate-500 leading-relaxed">Confirms reliable cortisol profiles in healthy human subjects with minimal discomfort, while noting challenges with blood-flow clogging.</p>
-        </li>
-        <li>
-          <a href="https://www.endocrine-abstracts.org/ea/0090/ea0090p439" class="font-medium text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
-            Krogh, J., et al. "Serial sampling of dried blood spots collected by a novel automated body-worn system, Fluispotter®." <em>Endocrine Abstracts</em>, vol. 90, 2023, P439.
-          </a>
-          <p class="mt-1.5 text-sm text-slate-500 leading-relaxed">Presented at the 25th European Congress of Endocrinology (ECE2023); details automated serial sampling and its safety and acceptability in human subjects.</p>
-        </li>
-        <li>
-          <a href="https://doi.org/10.1016/j.vascn.2022.107155" class="font-medium text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
-            Ollerenshaw, J. D., et al. "A novel device for serial venous blood sampling in a canine model." <em>Journal of Pharmacological and Toxicological Methods</em>, vol. 114, 2022, 107155.
-          </a>
-          <p class="mt-1.5 text-sm text-slate-500 leading-relaxed">Shows no stress-related changes in blood chemistry or behavior in a canine model — suitable for preclinical pharmacology and toxicology.</p>
-        </li>
-        <li>
-          <a href="https://ojs.utlib.ee/index.php/SJLAS/article/view/21375/16071" class="font-medium text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
-            Velschow, S., et al. "Technical and animal welfare perspectives of portable automated blood sampling with Fluispotter® in Göttingen Minipigs." <em>Scandinavian Journal of Laboratory Animal Science</em>, vol. 42, 2016.
-          </a>
-          <p class="mt-1.5 text-sm text-slate-500 leading-relaxed">Explores technical performance and welfare benefits in Göttingen minipigs. (Published as a meeting abstract; contact the journal for access.)</p>
-        </li>
-      </ol>
-      <p class="mt-6 text-slate-600 leading-relaxed">For a complete, up-to-date list or copies of specific papers, please <a href="#contact" class="text-brand-700 hover:text-brand-800 underline underline-offset-2">contact us</a>.</p>
+    <section id="publications" class="bg-slate-50 border-y border-slate-200">
+      <div class="max-w-4xl mx-auto px-5 py-16">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Publications</h2>
+        <p class="mt-4 text-slate-600 leading-relaxed">Peer-reviewed publications and abstracts on the performance, safety and applications of the Fluispotter device.</p>
+        <ol class="mt-8 space-y-4">
+          <li class="rounded-xl bg-white border border-slate-200 p-6">
+            <a href="https://doi.org/10.4155/bio-2020-0048" class="font-semibold text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
+              Adhikari, K. B., et al. "Fluispotter, a novel automated and wearable device for accurate volume serial dried blood spot sampling." <em>Bioanalysis</em>, vol. 12, no. 10, 2020, pp. 665–681.
+            </a>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">Demonstrates high accuracy and precision in serial dried blood spot sampling for cortisol analysis across a range of hematocrit values.</p>
+          </li>
+          <li class="rounded-xl bg-white border border-slate-200 p-6">
+            <a href="https://doi.org/10.1530/EC-23-0087" class="font-semibold text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
+              Krogh, J., et al. "Validation of a novel automated system, Fluispotter®, for serial sampling of dried blood spots." <em>Endocrine Connections</em>, vol. 12, no. 7, 2023, e230087.
+            </a>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">Confirms reliable cortisol profiles in healthy human subjects with minimal discomfort, while noting challenges with blood-flow clogging.</p>
+          </li>
+          <li class="rounded-xl bg-white border border-slate-200 p-6">
+            <a href="https://www.endocrine-abstracts.org/ea/0090/ea0090p439" class="font-semibold text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
+              Krogh, J., et al. "Serial sampling of dried blood spots collected by a novel automated body-worn system, Fluispotter®." <em>Endocrine Abstracts</em>, vol. 90, 2023, P439.
+            </a>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">Presented at the 25th European Congress of Endocrinology (ECE2023); details automated serial sampling and its safety and acceptability in human subjects.</p>
+          </li>
+          <li class="rounded-xl bg-white border border-slate-200 p-6">
+            <a href="https://doi.org/10.1016/j.vascn.2022.107155" class="font-semibold text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
+              Ollerenshaw, J. D., et al. "A novel device for serial venous blood sampling in a canine model." <em>Journal of Pharmacological and Toxicological Methods</em>, vol. 114, 2022, 107155.
+            </a>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">Shows no stress-related changes in blood chemistry or behavior in a canine model — suitable for preclinical pharmacology and toxicology.</p>
+          </li>
+          <li class="rounded-xl bg-white border border-slate-200 p-6">
+            <a href="https://ojs.utlib.ee/index.php/SJLAS/article/view/21375/16071" class="font-semibold text-slate-900 hover:text-brand-700" target="_blank" rel="noopener">
+              Velschow, S., et al. "Technical and animal welfare perspectives of portable automated blood sampling with Fluispotter® in Göttingen Minipigs." <em>Scandinavian Journal of Laboratory Animal Science</em>, vol. 42, 2016.
+            </a>
+            <p class="mt-2 text-sm text-slate-500 leading-relaxed">Explores technical performance and welfare benefits in Göttingen minipigs. (Published as a meeting abstract; contact the journal for access.)</p>
+          </li>
+        </ol>
+        <p class="mt-6 text-slate-600 leading-relaxed">For a complete, up-to-date list or copies of specific papers, please <a href="#contact" class="text-brand-700 hover:text-brand-800 underline underline-offset-2">contact us</a>.</p>
+      </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">About</h2>
-      <p class="mt-4 text-slate-600 leading-relaxed">
-        Fluispotter was founded in 2010 by
-        <a href="https://www.linkedin.com/in/stenvel/" class="text-brand-700 hover:text-brand-800 underline underline-offset-2" target="_blank" rel="noopener">Sten Velschow</a>,
-        an experienced laboratory-animal veterinarian and former Lundbeck executive with over 20 years in pharmaceutical research. The company was born from his frustration with error-prone, inefficient blood sampling: running animal studies, he saw first-hand the stress, inconsistency and errors of manual techniques — compromising both animal welfare and data quality. He set out to build a device that automates blood sampling to reduce stress and improve data quality. Our team, with deep expertise in the design, development and manufacturing of medical and consumer products, brings this vision to life.
-      </p>
-      <p class="mt-4 text-slate-600 leading-relaxed">🇩🇰 Proudly designed, developed and manufactured in Denmark — with in-house production ensuring every device meets stringent quality standards.</p>
+    <section id="about" class="max-w-5xl mx-auto px-5 py-16">
+      <div class="max-w-3xl">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">About</h2>
+        <p class="mt-5 text-slate-600 leading-relaxed">
+          Fluispotter was founded in 2010 by
+          <a href="https://www.linkedin.com/in/stenvel/" class="text-brand-700 hover:text-brand-800 underline underline-offset-2" target="_blank" rel="noopener">Sten Velschow</a>,
+          an experienced laboratory-animal veterinarian and former Lundbeck executive with over 20 years in pharmaceutical research. The company was born from his frustration with error-prone, inefficient blood sampling: running animal studies, he saw first-hand the stress, inconsistency and errors of manual techniques — compromising both animal welfare and data quality. He set out to build a device that automates blood sampling to reduce stress and improve data quality. Our team, with deep expertise in the design, development and manufacturing of medical and consumer products, brings this vision to life.
+        </p>
+        <p class="mt-4 text-slate-600 leading-relaxed">🇩🇰 Proudly designed, developed and manufactured in Denmark — with in-house production ensuring every device meets stringent quality standards.</p>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-12 border-t border-slate-100">
-      <h2 class="font-display text-xl font-bold text-slate-900">Contact</h2>
-      <p class="mt-4 text-slate-600 leading-relaxed">Looking to start a project or need a consultation? Get in touch and our team will get back to you.</p>
-      <div class="mt-6 text-slate-600 leading-relaxed">
-        <p class="text-slate-900 font-medium">Fluispotter ApS</p>
-        <p>Olgasvej 42, 2950 Vedbæk, Denmark</p>
-        <p class="mt-3">
-          <a href="mailto:post@fluispotter.com" class="text-brand-700 hover:text-brand-800 underline underline-offset-2">post@fluispotter.com</a><br>
-          <a href="tel:+4542600570" class="text-brand-700 hover:text-brand-800 underline underline-offset-2">+45 42 60 05 70</a><br>
-          <a href="https://www.linkedin.com/company/fluisense" target="_blank" rel="noopener" class="text-brand-700 hover:text-brand-800 underline underline-offset-2">LinkedIn</a>
-        </p>
+    <section id="contact" class="bg-slate-50 border-t border-slate-200">
+      <div class="max-w-5xl mx-auto px-5 py-16">
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 sm:p-10">
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Let's talk</h2>
+          <p class="mt-3 text-slate-600 max-w-xl">Looking to start a project or need a consultation? Get in touch and our team will get back to you.</p>
+          <div class="mt-8 grid sm:grid-cols-2 gap-8 text-sm">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wide text-slate-400">Address</div>
+              <p class="mt-2 text-slate-700 leading-relaxed">Fluispotter ApS<br>Olgasvej 42, 2950 Vedbæk<br>Denmark</p>
+            </div>
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wide text-slate-400">Contact</div>
+              <p class="mt-2 text-slate-700 leading-relaxed">
+                <a href="mailto:post@fluispotter.com" class="text-brand-700 hover:text-brand-800">post@fluispotter.com</a><br>
+                <a href="tel:+4542600570" class="text-brand-700 hover:text-brand-800">+45 42 60 05 70</a><br>
+                <a href="https://www.linkedin.com/company/fluisense" target="_blank" rel="noopener" class="text-brand-700 hover:text-brand-800">LinkedIn</a>
+              </p>
+            </div>
+          </div>
+          <a href="mailto:post@fluispotter.com" class="mt-8 inline-flex items-center gap-2 rounded-md bg-brand-600 hover:bg-brand-700 transition-colors text-white font-semibold px-5 py-3">
+            Get in touch <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-100">
-    <div class="max-w-3xl mx-auto px-5 py-8 text-sm text-slate-400">
-      &copy; <span id="copyright-year">2025</span> Fluispotter ApS. All rights reserved.
+  <footer class="border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-400">
+      <p>&copy; <span id="copyright-year">2025</span> Fluispotter ApS. All rights reserved.</p>
+      <div class="flex items-center gap-5">
+        <a href="mailto:post@fluispotter.com" class="hover:text-brand-700">post@fluispotter.com</a>
+        <a href="https://www.linkedin.com/company/fluisense" target="_blank" rel="noopener" class="hover:text-brand-700">LinkedIn</a>
+      </div>
     </div>
   </footer>
 
